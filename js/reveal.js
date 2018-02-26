@@ -1875,6 +1875,8 @@
 				updateOverview();
 			}
 
+			dispatchEvent( 'layout-updated' );
+
 		}
 
 	}
