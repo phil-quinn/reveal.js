@@ -1794,6 +1794,8 @@
 
 		if( dom.wrapper && !isPrintingPDF() ) {
 
+			dispatchEvent( 'layout-started' );
+
 			var size = getComputedSlideSize();
 
 			// Layout the contents of the slides
@@ -1875,7 +1877,7 @@
 				updateOverview();
 			}
 
-			dispatchEvent( 'layout-updated' );
+			dispatchEvent( 'layout-done' );
 
 		}
 
