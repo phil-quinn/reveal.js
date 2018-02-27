@@ -1792,9 +1792,9 @@
 	 */
 	function layout() {
 
-		if( dom.wrapper && !isPrintingPDF() ) {
+		dispatchEvent( 'layout-starting' );
 
-			dispatchEvent( 'layout-started' );
+		if( dom.wrapper && !isPrintingPDF() ) {
 
 			var size = getComputedSlideSize();
 
@@ -1877,7 +1877,7 @@
 				updateOverview();
 			}
 
-			dispatchEvent( 'layout-done' );
+			dispatchEvent( 'layout-finished' );
 
 		}
 
